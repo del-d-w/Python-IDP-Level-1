@@ -1,0 +1,60 @@
+Question:
+
+In a class maths teacher organised a game> In the game every student instructed is given a badge that has a number on it.
+
+The teacher instructed the students to form pairs (each pair consists of two students) so that when the minimum number from each pair is added, 
+it results in the maximum sum possible.
+
+Write a program that reads a that reads badges B of the students and prints the maximum sum possible.
+
+Input: The input will be a sinle line containing space seperated integers reresenting the badges B of the students.
+Output: The input will be a sinle line containing an integer that is the maximum sum possible.
+
+Explanation:
+
+Test Case 1: For example, if the given badges are B = 3 6 5 4
+All the possible pairs are 
+
+*(3,6),(4,5)--> minimum of (3,6) + minimum of (4,5) = 3 + 4 = 7
+*(3,5),(4,6)--> minimum of (3,5) + minimum of (4,6) = 3 + 4 = 7
+*(3,4),(5,6)--> minimum of (3,4) + minimum of (5,6) = 3 + 5 = 8
+
+The maximum sum possible is 8.
+
+So the output should be 8.
+
+
+Sample Input 1:
+3 6 5 4
+
+Sample Ouput 1:
+8
+
+Sample Input 2:
+7 3 7 6 2 3
+
+Sample Ouput 2:
+12
+
+
+Solution:
+
+lista= list(map(int,input().split()))
+n=1
+res=[]
+for i in lista:
+    for j in lista[n:]:
+        res.append((i,j))
+    n+=1
+a=res[0:len(res)//2]
+b=res[len(res)//2:]
+c=[]
+d=[]
+for i in a:
+    c.append(min(i))
+for i in b:
+    d.append(min(i))
+e=[]
+for i in range(len(a)):
+    e.append(c[i]+d[i])
+print(max(e))
