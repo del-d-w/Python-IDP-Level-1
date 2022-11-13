@@ -1,0 +1,66 @@
+Question:
+Write a program that reads a password P and prints the strength of the given password.
+calculate the strength of the password as below
+
+* Add 1 point for each uppercase and lowercase letter in the password
+* Add 2 points for each number and special character in the password, Consider only !@#$%^&()-+ as the special characters.
+* Add 10 points, if the password contains at least one lower case letter, one uppercase letter, one number and one  special character.
+
+Input: The input will be a sinle line containing string reresenting the password P
+Output: The input will be a sinle line containing an integer reresenting the Strength of the password.
+
+Explanation:
+
+Test Case 1: If the given password P=Welcome3@
+
+P Consists of 1 Uppercase letter (W)-->1*1=1
+P Consists of 6 Lowercase letters (elcome)-->6*1=6
+P Consists of 1 number (W)-->1*2=2
+P Consists of 1 special character (@)-->1*2=2
+P Consists of at least one lower case letter, one uppercase letter, one number and one  special character --> 10
+
+The sum of all points is 1+6+2+2+10 = 21
+
+Test Case 1: If the given password P=Qwerty$@
+
+P Consists of 1 Uppercase letter (Q)-->1*1=1
+P Consists of 5 Lowercase letters (werty)-->5*1=5
+P Consists of 0 numbers -->0*2=0
+P Consists of 2 special characters ($@)-->2*2=4
+
+The sum of all points is 1+5+0+4 = 10
+
+Sample Input 1:
+Welcome3@
+
+Sample Ouput 1:
+21
+
+Sample Input 1:
+Qwerty$@
+
+Sample Ouput 1:
+10
+
+
+Solution 1:
+
+a=input()
+countdigit=0
+countlower=0 
+countupper=0 
+countSpecial=0 
+countAll=0
+for i in a:
+    if i.isdigit():
+        countdigit+=2
+    if i.isupper():
+        countupper+=1
+    if i.islower():
+        countlower+=1 
+    if i=="!" or i=="@" or i=="#" or i=="$" or i=="%" or i=="^" or i=="&" or i=="*" or i=="(" or i==")" or i=="-" or i=="+":
+        countSpecial+=2
+if countdigit>0 and countlower>0 and countupper>0 and countSpecial>0:
+    countAll=10
+print(countdigit+countlower+countupper+countSpecial+countAll)
+
