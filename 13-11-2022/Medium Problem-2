@@ -1,0 +1,26 @@
+Rohit Travelled to America.On his return to India, he planned to bring some gadgets.
+
+He has that weigh from 1 to M. But when Rohit travels on an aeroplane, he is only allowed to carry a maximum weight of W.
+So, he wants to leave some of the gadgets which are already available in India and bring the maximum number of gadgets that are not available in India.
+
+Write a program that reads M gadgets, W weight limit and N space-seperated weights of common gadgets available in India and prints the maximum number of unique 
+gadgets that can be brought into India.
+
+Input: The first line of input contains space-seperated integers representing the no.of gadgets M, the maximum weight limit W, and number of gadgets weights N.
+       The second line of input contains N space-seperated integers representing the weights of common gadgets available in India.
+       
+Output: The ouput should be a single line containg an integer representing the maximum number of unique gadgets that can be brought into India.
+
+Explanation:
+
+Test Case 1: If the given M=10, W=10, N=3 and gadgets_weights= 1 3 5 
+
+The no.of gadgets Rohit wants to bring to India 10, which weights between 1 and 10, so the gadget weights are 1 2 3 4 5 6 7 8 9 10.
+The maximum weight he can carry on an aeroplane is 10.
+The gadgets weights that are available in India is 1 3 5. After removing th common gadget weights are 2 4 6 7 8 9 10
+The possible combinations of weight sets are less than 10 are 2 4, 2 6, 2 8, 4 6
+The maximum of no.of unique gadgets that can be brought into India is 2.
+
+So the output should be 2.
+
+
