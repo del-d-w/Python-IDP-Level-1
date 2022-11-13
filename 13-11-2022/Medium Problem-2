@@ -23,4 +23,50 @@ The maximum of no.of unique gadgets that can be brought into India is 2.
 
 So the output should be 2.
 
+Test Case 2: If the given M=14, W=13, N=4 and gadgets_weights= 4 6 8 9
 
+The no.of gadgets Rohit wants to bring to India 14, which weights between 1 and 14, so the gadget weights are 1 2 3 4 5 6 7 8 9 10 11 12 13 14.
+The maximum weight he can carry on an aeroplane is 13.
+The gadgets weights that are available in India is 4 6 8 9. After removing th common gadget weights are 3 5 7 10 11 12 13 14
+The possible combinations of weight sets are less than 13 are 1 2 3 5,  1 2 2 7 
+The maximum of no.of unique gadgets that can be brought into India is 4.
+
+So the output should be 4.
+
+
+Sample Input 1:
+10 10 3
+1 3 5
+
+Sample Output 1:
+2
+
+Sample Input 2:
+14 13 4
+4 6 8 9
+
+Sample Output 1:
+4
+
+
+Solution:
+
+m,w,n=list(map(int,input().split()))
+a=list(map(int,input().split()))
+lista=[]
+for i in range(1,m+1):
+    if i not in a:
+        lista.append(i)
+def cmbns(lista):
+    if len(lista)==0:
+        return [[]]
+    a=[]
+    for i in cmbns(lista[1:]):
+        a+=[i,i+[lista[0]]]
+    return a 
+res=cmbns(lista)
+b=[]
+for i in res[1:]:
+    if sum(i)<w:
+        b.append(len(i))
+print(max(b))
