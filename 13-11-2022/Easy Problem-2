@@ -1,6 +1,6 @@
 Question:
 
-In a class maths teacher organised a game> In the game every student instructed is given a badge that has a number on it.
+In a class maths teacher organised a game In the game every student instructed is given a badge that has a number on it.
 
 The teacher instructed the students to form pairs (each pair consists of two students) so that when the minimum number from each pair is added, 
 it results in the maximum sum possible.
@@ -8,7 +8,7 @@ it results in the maximum sum possible.
 Write a program that reads a that reads badges B of the students and prints the maximum sum possible.
 
 Input: The input will be a sinle line containing space seperated integers reresenting the badges B of the students.
-Output: The input will be a sinle line containing an integer that is the maximum sum possible.
+Output: The Output should be a sinle line containing an integer that is the maximum sum possible.
 
 Explanation:
 
