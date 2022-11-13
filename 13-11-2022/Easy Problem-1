@@ -36,14 +36,14 @@ Welcome3@
 Sample Ouput 1:
 21
 
-Sample Input 1:
+Sample Input 2:
 Qwerty$@
 
-Sample Ouput 1:
+Sample Ouput 2:
 10
 
 
-Solution 1:
+Solution:
 
 a=input()
 countdigit=0
